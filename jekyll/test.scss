@@ -2,7 +2,7 @@
 ---
 
 {% assign n = 100 %}
-{{ "n = " | append: n | warn }}
+{{ "n = " | append: n | message }}
 
 {% for i in (1..n) %}
 body.hoge-{{i}}{

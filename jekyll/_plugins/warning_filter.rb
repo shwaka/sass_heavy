@@ -1,6 +1,6 @@
 module Jekyll
-  module WarningFilter
-    def warn(msg)
+  module MessageFilter
+    def message(msg)
       # bad_file = @context.registers[:page]['path']
       # err_msg = "On #{bad_file}: #{msg}"
       puts msg
@@ -8,4 +8,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_filter(Jekyll::WarningFilter)
+Liquid::Template.register_filter(Jekyll::MessageFilter)
