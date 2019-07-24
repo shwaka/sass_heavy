@@ -1,0 +1,16 @@
+---
+---
+
+{% assign n = 100 %}
+{{ "n = " | append: n | message }}
+
+{% for i in (1..n) %}
+div.hoge-{{i}}{
+  p{
+    color: hsl({{i}}, 100%, 50%);
+  }
+  span{
+    @extend p;
+  }
+}
+{% endfor %}

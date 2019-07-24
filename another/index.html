@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet"
+          href="/test.css"
+          type="text/css"></link>
+  </head>
+  <body>
+    <div>
+      バグってる例が作れたと思ったけど，そうでもなかった．
+      n=99 と n=100 で同じ出力をする．
+      CSS の優先度とかそういう話？
+    </div>
+    <div class="hoge-1">
+      <span>div.hoge-1 span</span> (赤)
+    </div>
+    <div class="hoge-99">
+      <span>div.hoge-99 span</span> (緑)
+    </div>
+    <div class="hoge-1">
+      <div class="hoge-99">
+        <span>div.hoge-1 div.hoge-99 span</span> (緑)
+      </div>
+    </div>
+    <div class="hoge-99">
+      <div class="hoge-1">
+        <span>div.hoge-99 div.hoge-1 span</span> (緑)
+      </div>
+    </div>
+  </body>
+</html>
